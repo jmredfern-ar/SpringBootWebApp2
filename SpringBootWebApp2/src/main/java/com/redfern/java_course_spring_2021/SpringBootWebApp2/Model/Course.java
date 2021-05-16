@@ -2,6 +2,7 @@ package com.redfern.java_course_spring_2021.SpringBootWebApp2.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Course {
@@ -11,6 +12,9 @@ public class Course {
 	private String name;
 	private String department;
 	private String instructor;
+
+	@ManyToOne
+    private Student student;
 	
 	// CONSTRUCTORS
 	public Course() {

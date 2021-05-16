@@ -1,7 +1,10 @@
 package com.redfern.java_course_spring_2021.SpringBootWebApp2.Model;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Student {
@@ -13,6 +16,9 @@ public class Student {
 	private String email;
 	private String dob;
 	private Integer age;
+	
+	@OneToMany(mappedBy = "student")
+    private List<Course> courses;
 	
 	// CONSTRUCTORS
 	public Student() {

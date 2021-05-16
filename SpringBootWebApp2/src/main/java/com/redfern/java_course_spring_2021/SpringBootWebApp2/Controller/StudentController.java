@@ -33,7 +33,7 @@ public class StudentController {
 	public String home() {
 		return "home.jsp";
 	}
-	
+
 	@RequestMapping("/addStudent")
 	public String addStudent(Student student) {
 		sRepo.save(student);
