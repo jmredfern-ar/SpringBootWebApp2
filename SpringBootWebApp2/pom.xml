@@ -51,6 +51,10 @@
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jasper</artifactId>
 			<version>9.0.41</version>
+		</dependency> 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 	</dependencies>
 
