@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8" />
+        <title>View Instructor</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    </head>
+    <body>
+        <h1>View Instructor</h1>
+        <a th:href="@{/instructor-list}">Back to Instructor List</a>
+        <br/><br/>
+        <div th:if="${instructor}">
+            <table border="0">
+                <tr>
+                    <td>ID</td>
+                    <td>:</td>
+                    <td th:utext="${instructor.id}">...</td>          
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>:</td>
+                    <td th:utext="${instructor.name}">...</td>             
+                </tr>
+                <tr>
+                    <td>DOB</td>
+                    <td>:</td>
+                    <td th:utext="${instructor.dob}">...</td>
+                </tr>
+            </table>
+            <br/><br/>
+        </div>
+    </body>
+</html>

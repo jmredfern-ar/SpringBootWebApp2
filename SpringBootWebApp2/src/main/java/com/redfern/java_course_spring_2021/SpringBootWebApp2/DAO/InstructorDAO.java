@@ -7,5 +7,8 @@ import com.redfern.java_course_spring_2021.SpringBootWebApp2.Model.Instructor;
 
 @Repository
 public interface InstructorDAO extends JpaRepository<Instructor, Long> {
+	
+	//Installed @ 15:00 
+//	Instructor findByInstructorId(Long instructorId);
 
 }

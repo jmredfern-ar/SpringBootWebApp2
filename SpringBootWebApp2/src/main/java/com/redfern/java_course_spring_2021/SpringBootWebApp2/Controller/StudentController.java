@@ -22,29 +22,12 @@ import com.redfern.java_course_spring_2021.SpringBootWebApp2.Service.StudentServ
 @Controller
 public class StudentController {
 	
-	//@Autowired
-	//StudentRepo sRepo;
-	
-	// REINSTATE WHEN YOU MIGRATE BIZ LOGIC TO THE SERVICE
 	@Autowired
 	private StudentService studentService;
 	
 	@Autowired
 	private CourseService courseService;
 	
-//
-//	@Autowired
-//	public StudentController(StudentService studentService) {
-//		super();
-//		this.studentService = studentService;
-//	}
-
-	// ORIG LANDING PAGE FOR STUDENT
-//	@RequestMapping("api/v1/student")
-//	public String home() {
-//		return "student.html";
-//	}
-
 	@RequestMapping("api/v1/student")
 	public String getStudents(Model model) {
 		List<Student> students = studentService.findAll();
@@ -56,9 +39,4 @@ public class StudentController {
 		return "student-list.html";
 	}
 	
-//	@RequestMapping("api/v1/addStudent")
-//	public String addStudent(Student student) {
-//		//sRepo.save(student);
-//		return "student.html";
-//	}
 }
