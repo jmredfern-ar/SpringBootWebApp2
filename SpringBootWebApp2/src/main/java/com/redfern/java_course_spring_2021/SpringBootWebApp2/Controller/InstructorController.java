@@ -12,11 +12,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.redfern.java_course_spring_2021.SpringBootWebApp2.Model.Instructor;
 import com.redfern.java_course_spring_2021.SpringBootWebApp2.Service.InstructorService;
 
-@Controller
+//@Controller
+@RestController
 @RequestMapping("api/v1")
 public class InstructorController {
 	
@@ -24,9 +26,10 @@ public class InstructorController {
 	private InstructorService instructorService;
 	 
 	@PostMapping("/instructor")
-	public String saveInstructor(@RequestBody Instructor instructor) {
+	public void saveInstructor(@RequestBody Instructor instructor) {
+		System.out.println("Calling saveInstructor()...");
 		instructorService.saveInstructor(instructor);
-		return "instructor-list.html";
+//		return "instructor-list.html";
 	}
 	
 	@GetMapping("/instructor/{id}")
@@ -45,13 +48,15 @@ public class InstructorController {
 		return "instructor";
 	}
 	
-	@GetMapping("/instructor")
-	public String getInstructors(){
+	@GetMapping("/instructors")
+//	public String getInstructors(){
+	public List<Instructor> getInstructors() {
 		List<Instructor> instructors = instructorService.findAll();
-		List<String> names = new ArrayList<String>();
-		for(Instructor instructor : instructors) {
-			names.add(instructor.getName());
-		}
-		return "instructor-list.html"; //names;
+//		List<String> names = new ArrayList<String>();
+//		for(Instructor instructor : instructors) {
+//			names.add(instructor.getName());
+//		}
+		return instructors;
+//		return "instructor-list.html"; //names;
 	}
 }

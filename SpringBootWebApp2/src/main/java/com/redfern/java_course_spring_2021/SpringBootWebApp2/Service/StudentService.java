@@ -19,4 +19,8 @@ public class StudentService {
 		return students;
 	}
 
+	public Student save(Student student) {
+		return studentRepo.saveAndFlush(student);
+	}
+
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -17,8 +18,11 @@ public class Student {
 	private String dob;
 	private Integer age;
 		
-	@OneToMany(mappedBy = "student")
-    private List<Course> courses;
+//	@OneToMany(mappedBy = "student")
+//    private List<Course> courses;
+	
+	@ManyToMany
+	private List<Scholarship> scholarships;
 	
 	// CONSTRUCTORS
 	public Student() {
@@ -87,15 +91,15 @@ public class Student {
 		this.dob = dob;
 	}
 
-	public List<Course> getCourses() {
-		return courses;
-	}
-
-
-
-	public void setCourses(List<Course> courses) {
-		this.courses = courses;
-	}
+//	public List<Course> getCourses() {
+//		return courses;
+//	}
+//
+//
+//
+//	public void setCourses(List<Course> courses) {
+//		this.courses = courses;
+//	}
 
 
 
