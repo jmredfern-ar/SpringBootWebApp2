@@ -18,8 +18,8 @@ public class Student {
 	private String dob;
 	private Integer age;
 		
-//	@OneToMany(mappedBy = "student")
-//    private List<Course> courses;
+	@OneToMany(mappedBy = "student")
+    private List<Course> courses;
 	
 	@ManyToMany
 	private List<Scholarship> scholarships;

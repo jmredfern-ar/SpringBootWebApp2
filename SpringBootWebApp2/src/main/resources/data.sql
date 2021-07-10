@@ -6,6 +6,11 @@ INSERT INTO instructor(id, name, dob) values (777, 'Allison, Alester', '1977-11-
 INSERT INTO instructor(id, name, dob) values (778, 'Master, Shake', '1980-08-03');
 INSERT INTO instructor(id, name, dob) values (779, 'Merryweather, May', '1963-07-11');
 
+INSERT INTO course(id, name, department, student_id) VALUES (401, 'Underwater Basket Weaving', 'FACS', 103);
+INSERT INTO course(id, name, department, student_id) VALUES (402, 'Introduction to Archery', 'Kinesiology', 103);
+INSERT INTO course(id, name, department, student_id) VALUES (403, 'Gamma Ray Theoritics', 'Life Sciences', 102);
+INSERT INTO course(id, name, department, student_id) VALUES (404, 'Myrmecology', 'Zoology', 101);
+
 INSERT INTO scholarship(id, name, amount) VALUES (123, 'Tony Stark Memorial STEM', 50000);
 INSERT INTO scholarship(id, name, amount) VALUES (124, 'Ultron No Strings On Me World 1', 4000);
 INSERT INTO scholarship(id, name, amount) VALUES (125, 'Wandas Visionary Mind Stone Award', 10000);
