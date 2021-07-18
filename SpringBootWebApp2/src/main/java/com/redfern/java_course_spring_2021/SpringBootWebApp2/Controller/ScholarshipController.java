@@ -29,6 +29,7 @@ public class ScholarshipController {
 //		
 //	}
 
+	// ADDED FINDALL()
 	@GetMapping("/scholarships")
 	public List<Scholarship> getScholarships() {
 		return scholarshipService.findAll();
