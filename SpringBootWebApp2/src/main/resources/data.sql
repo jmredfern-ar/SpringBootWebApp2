@@ -15,6 +15,13 @@ INSERT INTO scholarship(id, name, amount) VALUES (123, 'Tony Stark Memorial STEM
 INSERT INTO scholarship(id, name, amount) VALUES (124, 'Ultron No Strings On Me World 1', 4000);
 INSERT INTO scholarship(id, name, amount) VALUES (125, 'Wandas Visionary Mind Stone Award', 10000);
 
+INSERT INTO advisor(name, department) VALUES ('Mack Mackey', 'Antropology');
+INSERT INTO advisor(name, department) VALUES ('Jack Jackey', 'Music');
+INSERT INTO advisor(name, department) VALUES ('Geoack Geoackey', 'Astrophysics');
+
+INSERT INTO payment(payment_id, payment_type, payment_amount) VALUES (PAYMENT_SEQ.nextval, 'Tuition', 3000);
+INSERT INTO payment(payment_id, payment_type, payment_amount) VALUES (PAYMENT_SEQ.nextval, 'Meal Plan', 450);
+
 INSERT INTO student_scholarships(students_id, scholarships_id) VALUES (101, 123);
 INSERT INTO student_scholarships(students_id, scholarships_id) VALUES (101, 125);
 INSERT INTO student_scholarships(students_id, scholarships_id) VALUES (102, 124);
