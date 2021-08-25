@@ -11,10 +11,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-//@Data
-//@NoArgsConstructor(access=AccessLevel.PUBLIC)
-//@AllArgsConstructor
+@Entity(name="scholarship")
 public class Scholarship {
 	
 	@Id

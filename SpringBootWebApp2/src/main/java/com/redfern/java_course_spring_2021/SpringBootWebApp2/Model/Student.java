@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 
-@Entity
+@Entity(name="student")
 public class Student {
 
 	// MEM VARS

@@ -11,6 +11,7 @@ INSERT INTO course(id, name, department, student_id) VALUES (402, 'Introduction 
 INSERT INTO course(id, name, department, student_id) VALUES (403, 'Gamma Ray Theoritics', 'Life Sciences', 102);
 INSERT INTO course(id, name, department, student_id) VALUES (404, 'Myrmecology', 'Zoology', 101);
 
+INSERT INTO scholarship(id, name, amount) VALUES (126, 'Thanos', -1);
 INSERT INTO scholarship(id, name, amount) VALUES (123, 'Tony Stark Memorial STEM', 50000);
 INSERT INTO scholarship(id, name, amount) VALUES (124, 'Ultron No Strings On Me World 1', 4000);
 INSERT INTO scholarship(id, name, amount) VALUES (125, 'Wandas Visionary Mind Stone Award', 10000);
